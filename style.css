@@ -255,3 +255,73 @@ body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 @keyframes pop{from{opacity:0;transform:translateY(20px) scale(.94)}}
 .toast{border-radius:14px;border:1px solid var(--line);border-left:3px solid var(--acc)}
 @media(max-width:820px){.bottom{max-height:72%}.hud{padding:.5rem .8rem}}
+/* ===== V3: rapikan layout, HUD, hint ===== */
+[hidden]{display:none!important}
+
+/* HUD: datar, tipis, tidak melayang */
+.hud{margin:0;border-radius:0;border-width:0 0 1px;box-shadow:none;padding:.5rem 1.1rem;gap:.5rem 1.2rem;
+ background:color-mix(in srgb,var(--bg1) 78%,transparent)}
+.hud .kr{flex:1 1 260px;min-width:0}
+.hud .kr .bar{max-width:320px;min-width:90px}
+.hud .kr em{min-width:2.8em;font-style:normal;opacity:.8}
+.hud .s{width:96px;flex:none}
+#h-su{margin-left:auto}
+.chip{font-size:.68rem;padding:2px 9px}
+@media(min-width:821px){.hud{flex-wrap:nowrap}}
+
+/* Area visual: jangan wrap, jangan terpotong */
+#vis{min-height:0;padding:10px 3vw}
+.row{flex-wrap:nowrap}
+.ig{width:clamp(240px,26vw,360px)}
+.ig .grid span{aspect-ratio:3/2}
+.spr{height:clamp(190px,40vh,420px)}
+.big .spr{height:clamp(210px,44vh,440px)}
+.bottom{flex:none;max-height:60%}
+@media(max-width:820px){.row{flex-wrap:wrap}.spr,.big .spr{height:24vh}}
+
+/* ===== V4: HUD rapi, layout tidak terpotong, kontrol volume ===== */
+
+/* HUD: satu baris tipis, menempel di atas */
+.hud{display:flex;align-items:center;flex-wrap:nowrap;gap:1.1rem;margin:0;padding:.45rem 1rem;min-height:46px;
+ border:0;border-bottom:1px solid var(--line);border-radius:0;box-shadow:none;font-size:.78rem;
+ background:color-mix(in srgb,var(--bg1) 72%,transparent)}
+.hud .kr{flex:1 1 auto;min-width:0;gap:.6rem}
+.hud .kt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:0 1 auto}
+.hud .kr .bar{flex:1 1 90px;max-width:260px;min-width:60px}
+.hud .kr em{min-width:2.8em;font-style:normal;opacity:.85}
+.g2,.g3,.g4{display:flex;align-items:center;gap:.5rem;flex:none}
+.g2{gap:.9rem}
+.g2 .s{width:84px}
+.g3{gap:.4rem}
+.g4{margin-left:auto;gap:.45rem}
+.vol{display:flex;align-items:center;gap:.4rem}
+.volr{width:78px;height:18px;accent-color:var(--acc);cursor:pointer;background:transparent}
+.mini .volr{width:90px;vertical-align:middle;margin-right:14px}
+#h-su{margin-left:0}
+
+/* Area visual: tidak boleh terpotong HUD / kotak dialog */
+#vis{position:relative;padding:0;overflow:hidden}
+#vis>.row{position:absolute;inset:0;padding:.6rem 3vw;flex-wrap:nowrap;align-items:flex-end;justify-content:center;gap:clamp(16px,6vw,110px)}
+#vis>.row>.spr{height:100%;max-height:440px;min-height:0}
+#vis>.row>.ig,#vis>.row>.mail,#vis>.row>.stack,#vis>.row>.acc,#vis>.row>.alert,#vis>.row>.waves{align-self:center}
+#vis .waves .spr{height:min(30vh,300px)}
+#vis .acc .spr{height:min(24vh,220px)}
+.ig{max-height:100%;overflow:hidden;width:clamp(230px,26vw,350px)}
+.ig .grid span{aspect-ratio:2/1}
+.ig.ed .photo{aspect-ratio:16/9}
+
+/* Area bawah: ukuran mengikuti isi, tidak menutupi visual */
+.bottom{flex:none;max-height:none;overflow:visible;gap:.5rem;padding-bottom:clamp(10px,2vh,22px)}
+#dlg{margin-top:16px;min-height:0;padding:1rem 1.4rem .7rem}
+#chips{margin-bottom:2px}
+
+@media(max-width:820px){
+ .g2{display:none}
+ .hud{flex-wrap:wrap;gap:.35rem .8rem}
+ .hud .kr{flex:1 1 100%}
+ .g4{margin-left:auto}
+ .volr{width:56px}
+ #vis>.row{flex-wrap:nowrap;gap:3vw}
+ #vis>.row>.spr{max-height:100%}
+ #choices{grid-template-columns:1fr}
+}
