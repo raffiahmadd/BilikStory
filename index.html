@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BALIK STORY — The Curation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="back">
+<div id="bg"><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i></div>
+<div id="veil"></div>
+<div id="toasts"></div>
+<div id="modal" hidden><div class="mbox" role="dialog" aria-modal="true"><button class="x" id="mx" aria-label="Tutup">×</button><div id="mc"></div></div></div>
+
+<main id="app">
+  <!-- A. INTRO (Scene 01) -->
+  <section class="screen active" id="s-intro" data-theme="back">
+    <div id="phones"></div>
+    <div class="intro-txt">
+      <p class="eyebrow">Episode 1</p>
+      <h1>BILIK STORY</h1>
+      <h2>THE CURATION</h2>
+      <p class="sub">An Interactive Journey Behind the Digital Self</p>
+      <p class="tag">“Setiap unggahan adalah cerita. Namun, apakah cerita itu adalah dirimu yang sejati?”</p>
+      <div class="btns">
+        <button class="btn pri" id="b-cont" hidden>LANJUTKAN</button>
+        <button class="btn pri" id="b-start">MULAI PERJALANAN</button>
+        <button class="btn" id="b-about">TENTANG GAME</button>
+        <button class="btn" id="b-how">PETUNJUK</button>
+      </div>
+      <div class="mini"><button class="lnk snd">♪ OFF</button><button class="lnk fsb">LAYAR PENUH</button><button class="lnk" id="b-reset">RESET PROGRES</button><button class="lnk" id="b-test">UJI ALUR</button></div>
+    </div>
+  </section>
+
+  <!-- B. INSTRUKSI -->
+  <section class="screen" id="s-how" data-theme="front">
+    <div class="card pane">
+      <h2>Petunjuk Permainan</h2>
+      <p class="lead">Selamat datang di BALIK STORY. Dalam permainan ini, kamu akan mengikuti perjalanan Rian dalam menghadapi dunia digital, identitas, dan dinamika perasaan.</p>
+      <ul class="how">
+        <li>Baca setiap dialog dan narasi.</li>
+        <li>Pilih respons yang menurutmu sesuai dengan situasi.</li>
+        <li>Setiap pilihan memiliki konsekuensi cerita.</li>
+        <li>Perhatikan perubahan indikator.</li>
+        <li>Ikuti aktivitas refleksi.</li>
+        <li>Tidak ada pilihan yang harus dianggap paling benar.</li>
+      </ul>
+      <p class="note">Game ini adalah media psikoedukasi, bukan alat diagnosis atau asesmen klinis.</p>
+      <div class="btns"><button class="btn" data-go="s-intro">KEMBALI</button><button class="btn pri" id="b-play">MULAI BERMAIN</button></div>
+    </div>
+  </section>
+
+  <!-- C. KARAKTER -->
+  <section class="screen" id="s-chars" data-theme="front">
+    <div class="pane wide">
+      <h2>Kenali Karakternya</h2>
+      <div class="chars">
+        <article class="card char" id="c-rian"></article>
+        <article class="card char" id="c-maya"></article>
+      </div>
+      <div class="btns"><button class="btn" data-go="s-how">KEMBALI</button><button class="btn pri" id="b-ep1">MULAI EPISODE 1</button></div>
+    </div>
+  </section>
+
+  <!-- D. GAME -->
+  <section class="screen" id="s-game">
+    <div class="frame">
+      <header class="hud" id="hud"></header>
+      <div class="main">
+        <div id="vis"></div>
+        <div id="panel" hidden></div>
+        <div class="bottom">
+          <div id="chips"></div>
+          <div id="dlg"><b id="who"></b><p id="txt"></p><small id="tap">klik / Spasi untuk lanjut ▸</small></div>
+          <div id="choices"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transisi Episode 2 -->
+  <section class="screen" id="s-ep2" data-theme="reflect">
+    <div class="card pane">
+      <p class="eyebrow">Segera hadir</p>
+      <h2>Episode 2: The Sanctuary</h2>
+      <p class="lead">Apakah second account akan menjadi ruang penyembuhan yang sejati, atau justru melahirkan kekusutan baru?</p>
+      <p>Episode 2 sedang dipersiapkan. Kamu akan kembali mengikuti Rian di ruang digital yang lebih privat. Progres Episode 1 tetap tersimpan di perangkatmu.</p>
+      <div class="btns"><button class="btn" id="b-back12">KEMBALI KE HASIL EPISODE 1</button><button class="btn pri" data-go="s-intro">KE MENU UTAMA</button></div>
+    </div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
