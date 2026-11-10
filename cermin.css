@@ -1,0 +1,32 @@
+/* CERMIN RASA: lapisan tambahan, memakai variabel tema BALIK STORY */
+.cr-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.cr-tabs button{border:1px solid var(--line);background:transparent;border-radius:99px;padding:4px 12px;font:500 .76rem var(--fu)}
+.cr-tabs button.on{background:var(--acc);color:var(--btnink);border-color:var(--acc)}
+.cr-box textarea,.cr-box select{width:100%;margin-top:6px;padding:8px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+.cr-box textarea{min-height:80px}
+.cr-tag{display:inline-block;font:500 .68rem var(--fu);padding:2px 9px;border-radius:99px;border:1px solid var(--acc);margin:2px 4px 2px 0}
+.cr-sim{font:700 .68rem var(--fu);color:var(--btnink);background:var(--acc);border-radius:6px;padding:2px 8px;display:inline-block;margin:4px 0}
+.cr-item{border:1px solid var(--line);border-radius:12px;padding:8px 12px;margin:6px 0;font-size:.85rem;line-height:1.5}
+.cr-help{border-left:4px solid var(--acc2);padding:8px 12px;margin:8px 0;background:var(--card);border-radius:10px}
+.cr-timer{font:700 2.4rem var(--fh);text-align:center;margin:8px 0}
+.cr-box .btn{padding:.5em 1.2em;font-size:.8rem;margin:4px 4px 0 0}
+#b-cr{width:auto;border-radius:99px;padding:0 10px}
+
+/* Nyawang Karep */
+.nk-p{display:flex;gap:6px;margin:10px 0}
+.nk-p i{flex:1;height:6px;border-radius:6px;background:var(--line);transition:background .4s}
+.nk-p i.on{background:linear-gradient(90deg,var(--acc2),var(--acc))}
+.nk-st{font:700 .75rem var(--fu);letter-spacing:.14em;color:var(--acc)}
+.nk-q{font:600 1.15rem/1.4 var(--fh);margin:4px 0 4px}
+.nk-sum dt{font:700 .75rem var(--fu);color:var(--acc);margin-top:8px}
+.nk-sum dd{margin:2px 0 0;font-size:.9rem;line-height:1.5}
+.nk-chips button{border:1px solid var(--line);background:transparent;border-radius:99px;padding:3px 10px;font:500 .72rem var(--fu);margin:2px 4px 2px 0}
+.nk-chips button:hover{border-color:var(--acc)}
+
+/* Momen cerita CERMIN RASA (beat) */
+.cr-beat{position:relative;margin-top:14px;padding:.9rem 1.2rem;border:1px solid var(--line);border-left:4px solid var(--acc2);border-radius:20px;background:var(--card);backdrop-filter:blur(18px);animation:up .6s cubic-bezier(.2,.8,.2,1)}
+.cr-beat p{font-size:.95rem;line-height:1.55;margin:4px 0 8px}
+.cr-who{display:inline-block;font:700 .68rem var(--fu);letter-spacing:.12em;color:var(--acc)}
+.cr-beat.on{border-left-color:var(--acc)}.cr-beat.on p{font-style:italic}
+.cr-beat .btn{padding:.5em 1.3em;font-size:.82rem}
+#panel .cr-beat{margin:10px 0}
